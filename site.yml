@@ -1,5 +1,10 @@
 ---
-
+- hosts: all
+  name: Update all nodes
+  become: yes
+  roles:
+    - role: updates
+    
 - hosts: all
   name: Download k0s on all nodes
   become: yes
